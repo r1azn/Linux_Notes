@@ -1,0 +1,138 @@
+|	"pipe"			This command takes the standard output of the command on the left,
+				 and pipes it as standard input to the command on the right.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'cat volcanoes.txt | wc | cat > islands.txt'
+							Here the output of cat volcanoes.txt is the
+							 standard input of wc. in turn, the wc command
+							 outputs the number of lines, words, and characters 
+							 in volcanoes.txt, respectively.
+
+
+
+
+
+=========================================================================================================
+>				The command redirects the standard output to a file.
+
+			_________________________________________________________________________________
+			ex I:				a single > will overwrite any data in the destination file
+
+			'"Hello" > hello.txt'
+							1)Here, "Hello" is entered as the standard input.
+							  The standard output "Hello" is redirected by >
+							  to the file hello.txt.
+
+							2)If the file hello.txt does not exist it will
+							  be created.
+
+
+=========================================================================================================
+>>				This command takes standard output of the command on the left and
+				 appends (adds) it to the file on the right.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'cat glaciers.txt >> rivers.txt'
+							Here, the the output data of rivers.txt will contain
+							the original contents of rivers.txt with the content
+							of glaciers.txt appended to it.
+
+
+=========================================================================================================
+<				The command takes the standard input from the file on the right
+				 and inputs it into the program on the left.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'cat < lakes.txt'
+							Here, lakes.txt is the standard input for the cat
+							 command. The standard output appears in the terminal.
+
+
+=========================================================================================================
+cat				It outputs the contents of a file to the terminal.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'cat hello.txt'			The contents of hello.txt are displayedin the terminal.
+				
+
+
+=========================================================================================================
+uniq	"unique"		It filters out adjacent, duplicate lines in a file.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'uniq deserts.txt'
+
+
+=========================================================================================================
+sort	"sort"			It takes the standard input and orders it alphabetically for the standard output.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'sort lakes.txt'
+
+
+
+=========================================================================================================
+grep	"global regular		It searches files for lines that match a pattern and returns the results.
+	 expression print"	It is also case sensitive.
+
+			_________________________________________________________________________________
+			ex I:				searches for "Mount" in mountains.txt.
+
+			'grep Mount mountains.txt'
+
+			_________________________________________________________________________________
+			ex II:
+
+			'grep -i Mount mountains.txt'
+							  -i: enables the command to be case insensitive
+
+			_________________________________________________________________________________
+			ex III:
+
+			'grep -R Arctic /home/ccuser/workspace/geography/'
+							  -R: stands for recursive
+							      Here grep -R searches the
+							      /home/ccuser/workspace/geography/ directory
+							      for the string 'Arctic' and outputs
+							      filenames and lines
+							      with matched results.
+
+			_________________________________________________________________________________
+			ex IV:
+
+			'grep -Rl Arctic /home/ccuser/workspace/geography'
+							   l: stands for "files with matches"
+							      Here grep -Rl searches the
+							      /home/ccuser/workspace/geography directory
+							      for the string "Arctic" and outputs
+							      filenames
+							      with matched results.
+
+=========================================================================================================
+sed	 "stream editor"	It is similar to "find and replace".
+
+			_________________________________________________________________________________
+			substitution ex I:		only for the first instance in any line
+
+			'sed s/snow/rain/'
+							   s: always used when using sed for substitution
+							snow: the search string, the text to find
+							rain: the replacement string
+
+			_________________________________________________________________________________
+			substitution ex II:		all instances in any line
+
+			'sed s/snow/rain/g'
+							   g: global; added after the replacement string

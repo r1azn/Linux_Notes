@@ -1,0 +1,269 @@
+add
+				This command adds a file, which is already in the project's working
+				 directory to the 'staging area'
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git add Project_Plan.txt'
+
+			_________________________________________________________________________________
+			ex II:
+
+			'git add "*.txt"'
+							1) A wild card can be used to add numerous items of
+							    the same file type at one time.
+							    (Don't forget the quotes!!!)
+
+
+
+=========================================================================================================
+branch
+				This command create a new branch or delete an existing branch
+				 of particular project.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git branch option_b'
+
+			_________________________________________________________________________________
+			ex II:
+
+			'git branch -d option_b'
+
+
+
+=========================================================================================================
+checkout
+				This command changes a files back to how they were at the last commit
+				 when used in conjunction with a file or file type.
+
+				This command can also be used to switch between branches of a particular
+				 project as well.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git checkout -- Project_Plan.txt'
+							1) --: This option can be used to separate
+								command-line options from a list of
+								files, (useful when filenames might be
+								 mistaken for command-line options)
+
+			_________________________________________________________________________________
+			ex II:
+
+			'git checkout option_b'
+							1) In this case 'option_b' is the name of a branch of
+							    a particular project.
+
+
+
+=========================================================================================================
+clone
+				This command pulls an existing project from a remote repository down
+				 to the local repository.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git clone https://github.com/AbeLincony/My_First_Proj.git'
+
+
+
+=========================================================================================================
+config --global user.name	(*** set this on new install ***)
+				This command sets the user name global variable, which is associated with
+				 the online repository being connected to using the local instance of git.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git config --global user.name "Abrahamil Lincony"'
+
+
+
+=========================================================================================================
+config --global user.email	(*** set this on new install ***)
+				This command sets the user email global variable, which is associated with
+				 the online repository being connected to using the local instance of git.
+			_________________________________________________________________________________
+			ex I:
+
+			'git config --global user.name "AbeLincony@gmail.com"'
+
+
+
+=========================================================================================================
+config --global --list
+				This command prints to the terminal the global git variable that are set.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git config --global --list'
+							1) If this command was executed after the above
+							    two commands, then the output would be like:
+
+							user.name="Abrahamil Lincony"
+							user.email="AbeLincony@gmail.com"
+
+
+
+=========================================================================================================
+commit
+				This command commits any files within the project's 'staging area'
+				 into the local repository.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git commit'
+							1) If this command is executed, then git will
+							    launch the default text editor, so a commit
+							    message can be input.
+
+			_________________________________________________________________________________
+			ex II:
+
+			'git commit -m "This is my commit message"'
+							1) The -m switch allows a commit message to be
+							    added inline with the commit command.
+
+
+
+=========================================================================================================
+diff
+				This command is used to find difference between two commits, or
+				 between the staged files and the most recent commit.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git diff HEAD'
+							1) HEAD: is a pointer which refers to the
+							    most recent commit.
+
+			_________________________________________________________________________________
+			ex II:
+
+			'git diff --staged'
+
+
+
+=========================================================================================================
+log
+				This command, when issued within a project's working directory, shows
+				 the history of all commits done against the local repository including
+				 the time stamp and the commit comments.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git log'
+
+
+
+=========================================================================================================
+merge
+				This command joins two or more branches of a particular project together.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git merge option_b'
+							1) Must on the branch to be merged with
+							     the branch listed in the command.
+
+
+
+=========================================================================================================
+push
+				This command pushes a project residing in the local repository
+				 to the remote repository.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git push origin master'
+							1) origin: refers to the remote
+							   copy of the repository
+
+							2) master: refers to the branch of the project
+
+							3) Once the command is issued git will ask for
+							    your user name and password before the action
+							    is completed.
+
+
+
+=========================================================================================================
+remote add origin
+				This command connects an existing project from the local repository up
+				 to an empty project in a remote repository.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git remote add origin https://github.com/AbeLincony/My_First_Proj.git'
+
+
+
+=========================================================================================================
+reset
+				This command removes a staged file.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git reset Project_Plan.txt'
+
+			_________________________________________________________________________________
+			ex II:
+
+			'git reset "*.txt"'
+							1) A wild card can be used to remove numerous
+							    items of the same file type at one time.
+							    (Don't forget the quotes!!!)
+
+
+
+=========================================================================================================
+rm
+				Remove files from the index, or from the working tree and the index.
+				'git rm' will not remove a file from just your working directory.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git rm Project_Plan.txt'
+
+			_________________________________________________________________________________
+			ex II:
+
+			'git rm "*.txt"'
+							1) A wild card can be used to remove numerous
+							    items of the same file type at one time.
+							    (Don't forget the quotes!!!)
+
+			_________________________________________________________________________________
+			ex III:
+
+			'git rm -r folder_of_proj_types/'
+							1) -r: Allow recursive removal of all folders
+								and files when a leading directory name
+								is given.
+
+
+
+=========================================================================================================
+status
+				This command, when issued within a project's working directory, lets us
+				 know whether we're on the Master branch, or an off shoot.
+				It also lets us know whether the working directory is clean or not.
+
+			_________________________________________________________________________________
+			ex I:
+
+			'git status'
